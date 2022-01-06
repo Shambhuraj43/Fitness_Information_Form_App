@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<!--
+ Filename: final-project.html
+ Written by: Shambhuraj Wadghule
+ Purpose: Final Project Form prototype file.
+ Date: 11/05/2021
+ LAST MODIFIED BY: Shambhuraj Wadghule
+ MODIFICATION HISTORY:
+ 10/29/2021: Original Build
+-->
+
+<!--
+Tested in Google Chrome and Mozilla Firefox
+  Did not face any issues. The functions are working fine.
+  Nothing needed to be changed.
+-->
+
+<html lang="en">
+    <head>
+
+        <title>Form Prototype</title>
+        <meta charset="utf-8">
+        <!-- CSS to define theme colors -->
+        <!-- <link href="../theme/jquery-ui.css" rel="stylesheet"> -->
+
+
+        <link href="../../theme/jquery-ui.css" rel="stylesheet">
+        <link href="../css/final-project-form-prototype.css" rel="stylesheet">
+		<!-- Link to hosted jQuery library goes after css file but before local js file -->
+        <!-- Probable performance boost if at very bottom of file -->
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+        <script src="../../theme/jquery-ui.js"></script>
+        <!-- <script> src="../js/final-project-form-prototype.js"></script> -->
+        <script type='text/javascript' src="../js/final-project-form-prototype.js"></script>
+
+
+
+    </head>
+
+    <body>
+
+      <!-- headings for the webpage -->
+      <h1 id="heading">
+          Form Prototype
+      </h1>
+
+      <form id="myForm">
+        <!-- Accordion -->
+        <div id="accordion">
+
+          <h2>Personal Information</h2>
+
+          <div>
+            <label for="first">First Name:</label>		<input type="text" 		id="first"><br>
+    				<label for="middle">Middle Name:</label>	<input type="text" 		id="middle"><br>
+    				<label for="last">Last Name:</label>		<input type="text" 		id="last"><br>
+    				<label for="phone">Telephone:</label>		<input type="tel" 		id="phone"><br>
+    				<label for="email">Email:</label>			<input type="email" 	id="email"><br>
+
+            <p>City:</p>
+				    &nbsp;&nbsp;&nbsp;<input id="autocomplete" type="text" class="cities" autocomplete="off"/>
+
+
+            <h3>Sign In Information</h3>
+            <label for="last">Username:</label>			<input type="text" 		id="username"><br>
+    				<label for="password">Password:</label>		<input type="password"  id="password"><br>
+          </div>
+
+          <h2>Fitness Information</h2>
+          <div>
+
+            <p>Gender</p>
+				&nbsp;&nbsp;&nbsp;<input id="radio1" type="radio" value="male" name="category" checked autofocus>Male<br>
+
+        &nbsp;&nbsp;&nbsp;<input id="radio2" type="radio" value="female" name="category"> Female<br>
+				&nbsp;&nbsp;&nbsp;<input id="radio3" type="radio" value="other" name="category">Other<br>
+
+
+            <p>Type of Exercise:</p>
+
+            &nbsp;&nbsp;&nbsp;<input id="checkbox1" type="checkbox"  value="Cardio"  	name="jobtype">Cardio<br>
+				&nbsp;&nbsp;&nbsp;<input id="checkbox2" type="checkbox"  value="Weight Lifting"  	name="jobtype">Weight Lifting<br>
+				&nbsp;&nbsp;&nbsp;<input id="checkbox3" type="checkbox"  value="Calisthenics"  	name="jobtype">Calisthenics<br>
+
+
+
+
+
+            <p>Birth Date</p>
+    				<input type="text" id="datepicker">
+
+            <p>Height</p>
+    				<input type="text" id="height">
+
+            <p>BMI</p>
+    				<input type="text" id="bmi">
+
+    				<p>Desired Weight</p>
+    				<input type="text" id="weight"><br>
+
+            <p>Number of Days Willing to Workout</p>
+
+            <p>
+              <input type="text" id="numDays" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
+
+            <div id="slider-range"></div><br><br><br>
+
+
+            <p>Any Allergies?</p>
+    				<input type="text" id="weight1"><br>
+
+          </div>
+
+
+      </div>
+
+
+
+
+    		<br><br><br><br>
+      </form>
+
+      <!--buttons-->
+    <br><br><br><br>
+    <button type="button"  id="reset">Reset</button>
+    <button type="button" id="submit">Submit</button>
+
+      <!--output-->
+	<label for="output" class="list">Output:</label><br>
+	<output id="output" class="list"></output><br><br><br><br><br>
+
+
+
+    </body>
+
+</html>

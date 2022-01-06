@@ -1,0 +1,100 @@
+/**************************************
+ AUTHOR: Shambhuraj Wadghule
+PURPOSE: Implement Different JQuery Events.
+ORIGINALLY CREATED ON: 11/10/2021
+LAST MODIFIED BY: Shambhuraj Wadghule
+MODIFICATION HISTORY:
+10/29/2021: Original Build
+***************************************/
+
+/************************************************
+Tested in Google Chrome and Mozilla Firefox
+  Did not face any issues. The functions are working fine.
+  Nothing needed to be changed.
+************************************************/
+
+
+/*****************************************************************************************************************/
+
+
+
+$(document).ready(function() {
+
+//Array of key-value pairs to store form data
+var data;
+
+// Add cities
+  var availableTags = [
+  	"Indiana",
+  	"Washington DC",
+  	"Chicago",
+  	"BASIC",
+  	"C",
+  	"C++",
+  	"Clojure",
+  	"COBOL",
+  	"ColdFusion",
+  	"Erlang",
+  	"Fortran",
+  	"Groovy",
+  	"Haskell",
+  	"Java",
+  	"JavaScript",
+  	"Lisp",
+  	"Perl",
+  	"PHP",
+  	"Python",
+  	"Ruby",
+  	"Scala",
+  	"Scheme"
+  ];
+
+$( "#accordion" ).accordion();
+
+$( "#autocomplete" ).autocomplete({
+	source: availableTags
+});
+
+$( "#datepicker" ).datepicker({
+ inline: true
+});
+
+
+$("#submit").click(function() {
+               data = $("#myForm").serializeArray();
+               $.each(data, function(i, field) {
+                   $("#output").append(field.name + ":"
+                           + field.value + "<br>" );
+               });
+           });
+
+
+
+
+function submitForm(){
+     $('#myForm').submit();
+ }
+
+ $("#reset").click(resetForm);
+
+ function resetForm() {
+
+    $("#myForm").trigger("reset");
+}
+
+
+
+$( function() {
+ $( "#slider-range" ).slider({
+   range: "min",
+   value: 3,
+   min: 1,
+   max: 7,
+   slide: function( event, ui ) {
+     $( "#numDays" ).val(  ui.value );
+   }
+ });
+ $( "#numDays" ).val( $( "#slider-range" ).slider( "value" ) );
+});
+
+});

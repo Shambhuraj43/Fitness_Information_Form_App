@@ -1,0 +1,98 @@
+/**************************************
+Filename: final-project-custom-validation.css
+Written by: Shambhuraj H. Wadghule
+Purpose: Getting the jQuery UI and the customized jQuery Validation plugin to work together
+Date: 01 December 2021
+Modification History:
+01 Dec 2021: Modified submit button functionality of the form.
+***************************************/
+
+/********************************************************************************************
+* This file creates CSS for the form. The form contains several HTML elements *
+* that are used to get input from the user. *
+* The data obtaned from the user needs tobeb validated. The validation is doing using *
+* JQuery Validation plugin as well as the custom rules for validation. *
+*********************************************************************************************/
+
+
+body {
+
+    background-image: url("../images/form-background-image.jpg");
+    /* Background image link */
+    font-family: "Trebuchet MS", sans-serif;
+    /* Font */
+    margin: 50px;
+    /* Margin */
+}
+
+#accordion{
+
+  height: 100;
+}
+
+.demoHeaders {
+    margin-top: 2em;
+}
+
+#dialog-link {
+    padding: .4em 1em .4em 20px;
+    /* Padding */
+    text-decoration: none;
+    position: relative;
+}
+
+#dialog-link span.ui-icon {
+    margin: 0 5px 0 0;
+    position: absolute;
+    left: .2em;
+    top: 50%;
+    margin-top: -8px;
+}
+
+/* icons */
+#icons {
+    margin: 0;
+    padding: 0;
+}
+
+/* list icons */
+#icons li {
+    margin: 2px;
+    /* margin */
+    position: relative;
+    padding: 4px 0;
+    /* Padding */
+    cursor: pointer;
+    float: left;
+    list-style: none;
+}
+
+#icons span.ui-icon {
+    float: left;
+    margin: 0 4px;
+}
+
+.fakewindowcontain .ui-widget-overlay {
+    position: absolute;
+}
+
+select {
+    width: 200px;
+}
+
+/* headline css */
+h1 {
+  color: #00ffff;
+}
+
+
+/* Output CSS */
+#output{
+  
+  font-family: "Times New Roman", Times, serif;
+  border-style: solid;
+  font-size: 1.5em;
+  color: white;
+}
+
+/* End CSS for jQuery UI Library */

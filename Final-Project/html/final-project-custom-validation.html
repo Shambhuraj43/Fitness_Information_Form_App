@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<!--
+Filename: final-project-custom-validation.html
+Written by: Shambhuraj H. Wadghule
+Purpose: Getting the jQuery UI and the customized jQuery Validation plugin to work together
+Date: 01 December 2021
+Modification History:
+03 Dec 2021: Modified submit button functionality of the form.
+-->
+
+<!--******************************************************************************************
+    * This file creates HTML for the form. The form contains several HTML elements           *
+    * that are used to get input from the user.                                              *
+    * The data obtaned from the user needs tobeb validated. The validation is doing using    *
+    * JQuery Validation plugin as well as the custom rules for validation.                   *
+    ******************************************************************************************-->
+
+<html lang="en">
+
+<head>
+
+    <title>Health Information Form color:</title>
+    <meta charset="utf-8">
+    <!-- CSS to define theme colors -->
+
+    <!-- CSS files links -->
+    <link href="../../theme/jquery-ui.css" rel="stylesheet">
+    <link href="../css/final-project-custom-validation.css" rel="stylesheet">
+
+    <!-- Link to hosted jQuery library goes after css file but before local js file -->
+    <!-- Probable performance boost if at very bottom of file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- JavaScript Files Links -->
+    <script src="../../theme/jquery-ui.js"></script>
+    <script src="../js/final-project-custom-validation.js"></script>
+    <script src="../../validation/dist/jquery.validate.js"></script>
+
+</head>
+
+<body>
+
+    <!-- headings for the webpage -->
+    <h1 id="heading">
+        Health Information Form
+    </h1>
+
+    <form id="myForm">
+
+        <!-- Accordion -->
+        <div id="accordion">
+
+            <!-- Heading 1 -->
+            <h2>Personal Information</h2>
+
+            <div>
+                <!-- Personal Information  -->
+                First name: <input type="text" id="FirstName" name="FirstName" placeholder="First Name" value="" required><br>
+                Middle name: <input type="text" id="MiddleName" name="MiddleName" placeholder="Middle Name" value="" required><br>
+                Last name: <input type="text" id="LastName" name="LastName" placeholder="Last Name" value="" required><br>
+                Telephone: <input type="tel" id="Telephone" name="Telephone" placeholder="1234567890" value="" required><br>
+                Email: <input type="email" id="Email" name="Email" value="" placeholder="abc@def.co" required><br>
+                <p>City:</p>
+
+                <!-- JQuery autocomplete -->
+                <input id="autocomplete" type="text" class="cities" name="City" value="" placeholder="Your City" autocomplete="off" required>
+
+
+                <!-- Sign In Information  -->
+                <h3>Sign In Information</h3>
+                Username: <input type="text" name="Username" value="" placeholder="Type Username" id="username" required><br>
+                Password: <input type="password" name="Password" value="" placeholder="Type Password" id="password" required><br>
+
+                <!-- Heading Fitness Information -->
+                <h2>Fitness Information</h2>
+
+                <!-- Radio Buttons for Gender Selection -->
+                <p>Gender</p>
+                <input id="radio1" type="radio" value="male" name="Gender" >Male
+                <input id="radio2" type="radio" value="female" name="Gender">Female
+                <input id="radio3" type="radio" value="other" name="Gender">Other
+
+                <!-- Checkboxes for Type of Exercise Selection -->
+                <p>Type of Exercise:</p>
+                <input id="checkbox1" type="checkbox" value="Cardio" name="TypeofExercise">Cardio
+                <input id="checkbox2" type="checkbox" value="Weight Lifting" name="TypeofExercise">Weight Lifting
+                <input id="checkbox3" type="checkbox" value="Calisthenics" name="TypeofExercise">Calisthenics
+
+                <!-- Birth Date -->
+                <p>Birth Date</p>
+                <input type="text" name="Birth Date" value="" id="datepicker" required>
+
+                <!-- Height -->
+                <p>Height</p>
+                <input type="text" name="Height" value="" id="height" required>
+
+                <!-- BMI -->
+                <p>BMI</p>
+                <input type="text" name="BMI" value="" id="bmi" required>
+
+                <!-- Desired Weight -->
+                <p>Desired Weight</p>
+                <input type="text" name="Desired Weight" value="" id="weight" required><br>
+
+                <!-- Number of Days wiling to Workout -->
+                <p>Number of Days Willing to Workout</p>
+                <p>
+                    <input type="text" name="Number of Days Willing to Workout" value="" id="numDays" required readonly style="border:0; color:#f6931f; font-weight:bold; ">
+                </p>
+
+                <!-- SLider for number of days willing to workout -->
+                <div id="slider-range"></div>
+
+                <!-- Allergies -->
+                <p>Any Allergies?</p>
+                <input type="text" name="Allergies" value="" id="allergy" required><br>
+
+            </div> <!-- div end for form content-->
+
+
+        </div>
+        <!--div for accordion end-->
+
+        <!--Submit and Reset buttons-->
+        <br><br><br><br>
+        <input type="reset">
+        <input type="submit">
+        <br><br><br><br>
+    </form> <!-- End of Form -->
+
+    <!--output-->
+    <p id="output"> <br>User Information: </p>
+</body>
+
+</html>
